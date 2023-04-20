@@ -4,7 +4,7 @@ Code release for "Model Barrier: A Compact Un-Transferable Isolation Domain for 
 
 ## Paper
 
-<div align=center><img src="./Figures/1.pdf" width="100%"></div>
+<div align=center><img src="https://github.com/LyWang12/CUTI-Domain/blob/main/Figure/1.png" width="100%"></div>
 
 [Model Barrier: A Compact Un-Transferable Isolation Domain for Model Intellectual Property Protection](https://arxiv.org/abs/2303.11078) 
 (CVPR 2023)
