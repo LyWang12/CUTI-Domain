@@ -185,7 +185,7 @@ def get_visda_data(source):
     list_img = []
     list_label = []
     data_size = 0
-    root_temp = r"/data1/WLY/code/CVPR/src/ntl/data/visda/{}".format(source)
+    root_temp = r"./data/visda/{}".format(source)
     class_path = os.listdir(root_temp)
     for i in range(len(class_path)):
         class_temp = os.path.join(root_temp, class_path[i])
