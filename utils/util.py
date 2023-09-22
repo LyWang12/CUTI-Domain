@@ -181,23 +181,23 @@ def get_stl_data():
     return [list_img, list_label, data_size]
 
 
-def get_home_data(source):
+def get_visda_data(source):
     list_img = []
     list_label = []
     data_size = 0
-    root_temp = r"D:/WLY/Documents/NUAA/TPAMI2/code/Target-Special/data/office-home-65/{}".format(source)
+    root_temp = r"/data1/WLY/code/CVPR/src/ntl/data/visda/{}".format(source)
     class_path = os.listdir(root_temp)
     for i in range(len(class_path)):
         class_temp = os.path.join(root_temp, class_path[i])
         img_path = os.listdir(class_temp)
-        for j in range(len(img_path)):
+        for j in range(1000):
             img_path_temp = os.path.join(class_temp, img_path[j])
             img = cv2.imread(img_path_temp)
             img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-            img = cv2.resize(img, (224, 224))
-
+            img = cv2.resize(img, (112, 112))
+            
             list_img.append(img)
-            list_label.append(np.eye(len(class_path))[i])
+            list_label.append(np.eye(12)[i])
             data_size += 1
 
     np.random.seed(0)
@@ -208,8 +208,8 @@ def get_home_data(source):
 
     list_label = np.asarray(list_label)
     list_label = list_label[ind]
-
     return [list_img, list_label, data_size]
+
 
 
 def get_augment_data(source):
