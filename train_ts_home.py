@@ -8,7 +8,7 @@ from torch.optim import lr_scheduler
 from torch.utils.data import DataLoader
 
 from utils.getdata import Cus_Dataset
-from utils.util import get_home_data
+from utils.util import get_visda_data
 
 from utils.network import ImageClassifier
 from transformer import swin_tiny_patch4_window7_224
@@ -21,8 +21,8 @@ batch_size = 32
 device = torch.device("cuda")
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
-SOURCE = 'Art'   # Art, Clipart, Product, RealWorld
-TARGET = 'Clipart'   # Art, Clipart, Product, RealWorld
+SOURCE = 'train'   # Art, Clipart, Product, RealWorld
+TARGET = 'validation'   # Art, Clipart, Product, RealWorld
 
 def validate_class(val_loader, model, epoch, num_class=10):
     model.eval()
@@ -60,12 +60,12 @@ def setup_seed(seed):
 
 
 def train():
-    num_classes = 65
+    num_classes = 12
 
-    dataset1 = get_home_data(SOURCE)
-    dataset2 = get_home_data(TARGET)
+    dataset1 = get_visda_data(SOURCE)
+    dataset2 = get_visda_data(TARGET)
     print('original data loaded...')
-    PATH = 'D:/WLY/Documents/NUAA/CVPR/github/' + SOURCE + '_to_' + TARGET + '.pth'
+    PATH = './' + SOURCE + '_to_' + TARGET + '.pth'
 
     datafile = Cus_Dataset(mode='train',
                            dataset_1=dataset1, begin_ind1=0, size1=2000,
