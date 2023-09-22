@@ -13,7 +13,7 @@ from utils.util import get_visda_data
 from utils.network import ImageClassifier
 from transformer import swin_tiny_patch4_window7_224
 
-SEED = 2022
+SEED = 2023
 lr = 0.0001
 nepoch = 30
 workers = 10
