@@ -21,8 +21,8 @@ batch_size = 32
 device = torch.device("cuda")
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
-SOURCE = 'train'   # Art, Clipart, Product, RealWorld
-TARGET = 'validation'   # Art, Clipart, Product, RealWorld
+SOURCE = 'train'  
+TARGET = 'validation' 
 
 def validate_class(val_loader, model, epoch, num_class=10):
     model.eval()
@@ -68,10 +68,10 @@ def train():
     PATH = './' + SOURCE + '_to_' + TARGET + '.pth'
 
     datafile = Cus_Dataset(mode='train',
-                           dataset_1=dataset1, begin_ind1=0, size1=2000,
-                           dataset_2=dataset2, begin_ind2=0, size2=2000)
-    datafile_val1 = Cus_Dataset(mode='val', dataset_1=dataset1, begin_ind1=2000, size1=400)
-    datafile_val2 = Cus_Dataset(mode='val', dataset_1=dataset2, begin_ind1=2000, size1=400)
+                           dataset_1=dataset1, begin_ind1=0, size1=5000,
+                           dataset_2=dataset2, begin_ind2=0, size2=5000)
+    datafile_val1 = Cus_Dataset(mode='val', dataset_1=dataset1, begin_ind1=5000, size1=1000)
+    datafile_val2 = Cus_Dataset(mode='val', dataset_1=dataset2, begin_ind1=5000, size1=1000)
     valloader1 = DataLoader(datafile_val1, batch_size=batch_size, shuffle=True, num_workers=workers, drop_last=True)
     valloader2 = DataLoader(datafile_val2, batch_size=batch_size, shuffle=True, num_workers=workers, drop_last=True)
 
