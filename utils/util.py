@@ -218,16 +218,16 @@ def get_augment_data(source):
     aug_data_size = 0
     gan_data_size = 0
 
-    augment_trainset = os.listdir(r"D:/WLY/Documents/NUAA/TPAMI2/code/AdaIN/output/augment_{}".format(source))
-    augment_labels = np.loadtxt(r"D:/WLY/Documents/NUAA/TPAMI2/code/AdaIN/output/augment_{}/labels".format(source))
+    augment_trainset = os.listdir(r"your_path/augment_{}".format(source))
+    augment_labels = np.loadtxt(r"your_path/augment_{}/labels".format(source))
     for i in range(len(augment_trainset) - 1):
-        img = cv2.imread(r"D:/WLY/Documents/NUAA/TPAMI2/code/AdaIN/output/augment_{}/img_{}.png".format(source, i))
+        img = cv2.imread(r"your_path/augment_{}/img_{}.png".format(source, i))
         list_img.append(img)
         list_label.append(np.eye(10)[int(augment_labels[i])])
         aug_data_size += 1
     print(aug_data_size)
 
-    root_temp = r"D:/WLY/Documents/NUAA/TPAMI2/code/AdaIN/output/{}".format(source)
+    root_temp = r"your_path/output/{}".format(source)
     class_path = os.listdir(root_temp)
     for i in range(len(class_path)):
         class_temp = os.path.join(root_temp, class_path[i])
