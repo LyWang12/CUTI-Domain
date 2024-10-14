@@ -66,10 +66,11 @@ python train_author_dight.py
 ## Citation
 If you find this code useful for your research, please cite our [paper](https://arxiv.org/abs/2303.11078):
 ```
-@article{wang2023model,
-  title={Model Barrier: A Compact Un-Transferable Isolation Domain for Model Intellectual Property Protection},
+@inproceedings{wang2023model,
+  title={Model barrier: A compact un-transferable isolation domain for model intellectual property protection},
   author={Wang, Lianyu and Wang, Meng and Zhang, Daoqiang and Fu, Huazhu},
-  journal={arXiv preprint arXiv:2303.11078},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={20475--20484},
   year={2023}
 }
 ```
