@@ -6,7 +6,7 @@ Code release for "Model Barrier: A Compact Un-Transferable Isolation Domain for 
 
 <div align=center><img src="https://github.com/LyWang12/CUTI-Domain/blob/main/Figure/1.png" width="100%"></div>
 
-[Model Barrier: A Compact Un-Transferable Isolation Domain for Model Intellectual Property Protection](https://arxiv.org/abs/2303.11078) 
+[Model Barrier: A Compact Un-Transferable Isolation Domain for Model Intellectual Property Protection](https://openaccess.thecvf.com/content/CVPR2023/html/Wang_Model_Barrier_A_Compact_Un-Transferable_Isolation_Domain_for_Model_Intellectual_CVPR_2023_paper.html) 
 (CVPR 2023)
 
 We propose a Compact Un-Transferable Isolation Domain (CUTI-domain), which acts as a barrier to block illegal transfers from authorized to unauthorized domains, to protect the intellectual property (IP) of AI models.
@@ -64,7 +64,7 @@ python train_author_dight.py
 ```
 
 ## Citation
-If you find this code useful for your research, please cite our [paper](https://arxiv.org/abs/2303.11078):
+If you find this code useful for your research, please cite our [paper](https://openaccess.thecvf.com/content/CVPR2023/html/Wang_Model_Barrier_A_Compact_Un-Transferable_Isolation_Domain_for_Model_Intellectual_CVPR_2023_paper.html):
 ```
 @inproceedings{wang2023model,
   title={Model barrier: A compact un-transferable isolation domain for model intellectual property protection},
